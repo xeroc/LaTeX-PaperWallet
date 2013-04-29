@@ -1,0 +1,12 @@
+# Latex temporary file
+*.bbl
+*.blg
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.lof
+*.idx
+*.adx
