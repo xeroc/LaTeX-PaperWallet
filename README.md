@@ -1,7 +1,9 @@
 Generate PDF paperwallet with QR-codes
 
-Requirements:
-----------------------
+# Disclaimer #
+Use at your own risk!
+
+# Requirements: #
 Python2:
 * import bitcoinrpc
 * import requests
@@ -14,8 +16,7 @@ LaTeX:
 * \usepackage{auto-pst-pdf}
 * \usepackage{csvtools}
 
-Create PaperWallet
-----------------------
+# Create PaperWallet #
 1. Store address and privkey in csv file using python
 	$ python2 wallet.py > wallet.csv
 2. Execute LaTeX
