@@ -1,16 +1,6 @@
 # sensitive Files
 wallet.csv
-paperWallet-pics.pdf
 paperWallet.pdf
+paperWallet-pics.pdf
 # Latex temporary file
-*.bbl
-*.blg
-*.aux
-*.log
-*.nav
-*.out
-*.snm
-*.toc
-*.lof
-*.idx
-*.adx
+paperwallet-generated-files/
