@@ -1,3 +1,7 @@
+# sensitive Files
+wallet.csv
+paperWallet-pics.pdf
+paperWallet.pdf
 # Latex temporary file
 *.bbl
 *.blg
