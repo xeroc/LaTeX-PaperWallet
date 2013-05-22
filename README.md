@@ -6,14 +6,15 @@ Use at your own risk!
 # Requirements: #
 import-wallet.py:
 * bitcoind or bitcoin-qt
-* Python
+
+generate-wallet.sh:
+* vanitygen
+
+Python libraries:
 * import bitcoinrpc
 * import requests
 * import json
 * import subprocess
-
-generate-wallet.sh:
-* vanitygen
 
 LaTeX:
 * \usepackage{tikz}
@@ -34,3 +35,8 @@ LaTeX:
 3. Print
 4. Shred wallet.csv, pdfs and all generated files
 5. Donate to xeroc, vanitygen, charity ...
+
+# Donations are welcome #
+Thank you for every donation.
+
+	1XeRocJ6PRUX419QQo9crW5nbsjetJLUn
