@@ -13,4 +13,4 @@ mv paperwallet-generated-files/paperWallet.pdf ./
 echo "-------------------------"
 echo "now print paperWallet.pdf"
 echo "don't forget to run"
-echo 'shred -u -z wallet.csv paperWallet.pdf paperWallet-pics.pdf paperwallet-generated-files/*'
+echo "./safe-clean-up"

@@ -6,6 +6,7 @@ Use at your own risk!
 # Requirements: #
 import-wallet.py:
 * bitcoind or bitcoin-qt
+Latex distrubition such as TexLive or MikTex
 
 generate-wallet.sh:
 * vanitygen
@@ -21,8 +22,9 @@ LaTeX:
 * \usepackage{pst-barcode}
 * \usepackage{auto-pst-pdf}
 * \usepackage{csvtools}
+* \usepackage{coolstr}
 
-# Create PaperWallet #
+# Howto Create PaperWallet #
 1. Store address and privkey in csv file
 	* using import-wallet.py to get the keys from bitcoind or bitcoin-qy
 		$ python2 import-wallet.py > wallet.csv
@@ -30,6 +32,7 @@ LaTeX:
 		$ ./generate-wallet.sh -k 1Pattern
 		press Ctrl + C when You have enough
 		View/edit your wallet.csv
+3. Uncomment _ONE_ note layout input line in 'paperWallet.tex' (line 41-48)
 2. Generate the PDF
 	$ ./generate.sh
 3. Print

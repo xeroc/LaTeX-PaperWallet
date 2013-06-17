@@ -1,30 +1,23 @@
 \documentclass[10pt,a4paper]{article}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{color}
 \usepackage{tikz}
 \usetikzlibrary{backgrounds}
 \usetikzlibrary{calc}
-\normalfont
 \usepackage[T1]{fontenc}
 \usepackage{pst-barcode}
 \usepackage{auto-pst-pdf}
 \usepackage{csvtools}
+\usepackage{coolstr}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MARGINS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MARGINS
 \setlength{\textwidth}{150mm}
 \setlength{\textheight}{260mm}
-
 \renewcommand{\baselinestretch}{15.00}
-
 \voffset        -1in
 \hoffset        -1in
-\topmargin       11.5mm % should be 13.5 but need extra space because of printer
-\oddsidemargin   11.5mm % should be 13.5 but need extra space because of printer
-\evensidemargin  11.5mm % should be 13.5 but need extra space because of printer
-% \topmargin       1mm
-% \oddsidemargin   1mm
-% \evensidemargin  1mm
+\topmargin       11.5mm
+\oddsidemargin   11.5mm
+\evensidemargin  11.5mm
 \headheight      0mm
 \headsep         0mm
 \topskip         0mm
@@ -36,36 +29,24 @@
 \fboxsep         0pt
 \fboxrule        0pt
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FONT AND PAGESTYLE %%%%%%%%%%%%%%%%%%%%%%%%%
+%% FONT AND PAGESTYLE && CSV FILE SETTINGS
 \renewcommand{\familydefault}{\sfdefault}
 \pagestyle{empty}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CSV FILE DEF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\normalfont
 \setcsvseparator{;}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% VISITENKARTEN MACRO %%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\PaperWallet}{
- \begin{tikzpicture}[framed,inner frame sep=0]
-  \node[coordinate] at (0pt,0pt) (topleft) {};
-  \path[clip] (topleft) rectangle (85mm,-54mm); % The minus is important
-  \node[anchor=west,inner sep=0] at ($(topleft)+(5mm,-36mm)$) (QRCode1) {
-   \begin{pspicture}(50mm,50mm)
-    \psbarcode[linecolor=green!60!black]{\insertAddress}{eclevel=H}{qrcode}
-   \end{pspicture}
-  };
-  \node[anchor=east,inner sep=0] at ($(topleft)+(80mm,-36mm)$) (QRCode2) {
-   \begin{pspicture}(50mm,50mm)
-    \psbarcode[linecolor=red!60!black]{\insertPrivKey}{eclevel=H}{qrcode}
-   \end{pspicture}
-  };
-  \path (QRCode1.east) -- 
-   node[midway,opacity=0.8,anchor=center] {\includegraphics[width=2cm]{Bitcoin_euro.png}}
-        (QRCode2.west);
-  \node[anchor=north,font=\small\bfseries] at ($(topleft)+(42.5mm,-2mm)$) (Address) {\insertAddress};
-  \node[anchor=north,below=.5ex,font=\tiny] at (Address.south) (PrivKey) {\color{gray}{\insertPrivKey}};
-  \node[anchor=north,font=\large,below=1ex] at (PrivKey.south) (Balance) {\small{Balance:} \insertBalance\ BTC};
- \end{tikzpicture}
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INPUT YOUR NOTE LAYOUT HERE
+%% uncomment ONLY ONE line here
+\input{notes/note_xeroc}
+% \input{notes/note_75rtuga}
+% \input{notes/note_MBMesser}
+% \input{notes/note_Timbo925_Green}
+% \input{notes/note_Timbo925_Grey}
+% \input{notes/note_acorn}
+% \input{notes/note_canton}
+% \input{notes/note_mrno}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
  \applyCSVfile{wallet.csv}{\PaperWallet\hskip5mm}
