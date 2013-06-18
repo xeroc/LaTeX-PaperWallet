@@ -23,6 +23,6 @@
      \psbarcode[linecolor=red!60!black]{\insertPrivKey}{eclevel=H}{qrcode}
     \end{pspicture}}};
   \node[anchor=west,font=\small\bfseries] at ($(topleft)+(36mm,-7mm)$) (Address) {\insertAddress};
-  \node[anchor=west,font=\small\bfseries,rotate=90] at ($(topleft)+(145mm,-28.7mm)$) (Address2) {\expandafter\substr\expandafter{\insertAddress}{1}{12}};
+  \node[anchor=west,font=\small\bfseries,rotate=90] at ($(topleft)+(145mm,-28.7mm)$) (Address2) {\expandafter\substr\expandafter{\insertAddress}{1}{10}};
  \end{tikzpicture}
 }
