@@ -5,7 +5,7 @@ Use at your own risk!
 
 # Requirements: #
 import-wallet.py:
-* bitcoind or bitcoin-qt
+* primecoind
 Latex distrubition such as TexLive or MikTex
 
 generate-wallet.sh:
@@ -26,7 +26,7 @@ LaTeX:
 
 # Howto Create PaperWallet #
 1. Store address and privkey in csv file
-	* using import-wallet.py to get the keys from bitcoind or bitcoin-qy
+	* using import-wallet.py to get the keys from primecoind
 		$ python2 import-wallet.py > wallet.csv
 	* using generate-wallet.sh to generate keys with have an address matching a pattern (e.g. start with 1Fuu)
 		$ ./generate-wallet.sh -k 1Pattern
@@ -41,5 +41,5 @@ LaTeX:
 
 # Donations are welcome #
 Thank you for every donation.
-
-	1XeRocJ6PRUX419QQo9crW5nbsjetJLUn
+BTC: `1XeRocJ6PRUX419QQo9crW5nbsjetJLUn` 
+XPM: `AXeRocF9m3VX3P5TAfGiDq6hSSqWG5r6nd`
