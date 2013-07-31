@@ -21,10 +21,10 @@ for acc in accs:
 	for add in adds:
 		x          = str(add)	
 		# get privkey from daemon
-		privkey    = subprocess.check_output('bitcoind dumpprivkey "%s"' % (x), shell=True)
+		privkey    = subprocess.check_output('primecoind dumpprivkey "%s"' % (x), shell=True)
 		# get balance using blockchain.info
-		balanceURL = "http://blockchain.info/address/%s?format=json" % (x)
-		balance    = requests.get(balanceURL).json['final_balance']/100000000.0
-		print "%s;%s;%3.10f" %( x.strip(),privkey.strip(),balance )
+		# balanceURL = "http://blockchain.info/address/%s?format=json" % (x)
+		# balance    = requests.get(balanceURL).json['final_balance']/100000000.0
+		print "%s;%s;--" %( x.strip(),privkey.strip() )
 
 conn. walletlock()

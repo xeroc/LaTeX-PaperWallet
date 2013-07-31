@@ -10,8 +10,10 @@ then
 	chmod 600 wallet.csv
 fi
 
+echo "[WARNING] Do check your private key before depositing"
+
 ad=
-vanitygen "$@" | while read a b
+vanitygen -X 23 "$@" | while read a b
 do
 	if [ "$a" == "Address:" ]
 	then
