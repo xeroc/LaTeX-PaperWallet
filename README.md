@@ -9,10 +9,9 @@ In order to distinguish between cryptocoins I created a branch for each.
 Browse the existing branches using github (link above) or clone the repo and
 checkout the branches by
 
-$ git clone -b btc https://github.com/xeroc/LaTeX-PaperWallet.git
-$ git clone -b xpm https://github.com/xeroc/LaTeX-PaperWallet.git
-
+$ `git clone -b btc https://github.com/xeroc/LaTeX-PaperWallet.git`  
+$ `git clone -b xpm https://github.com/xeroc/LaTeX-PaperWallet.git`
 
 # Donations are welcome #
-BTC: 1XeRocJ6PRUX419QQo9crW5nbsjetJLUn
-XPM:	AXeRocF9m3VX3P5TAfGiDq6hSSqWG5r6nd
+BTC: `1XeRocJ6PRUX419QQo9crW5nbsjetJLUn`  
+XPM:	`AXeRocF9m3VX3P5TAfGiDq6hSSqWG5r6nd`
