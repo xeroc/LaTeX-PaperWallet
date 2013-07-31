@@ -13,5 +13,5 @@ $ git clone -b **btc** https://github.com/xeroc/LaTeX-PaperWallet.git
 $ git clone -b **xpm** https://github.com/xeroc/LaTeX-PaperWallet.git
 
 # Donations are welcome #
-BTC: 1**XeRoc**J6PRUX419QQo9crW5nbsjetJLUn  
-XPM:	A**XeRoc**F9m3VX3P5TAfGiDq6hSSqWG5r6nd
+BTC: `1XeRocJ6PRUX419QQo9crW5nbsjetJLUn`  
+XPM:	`AXeRocF9m3VX3P5TAfGiDq6hSSqWG5r6nd` 
