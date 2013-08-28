@@ -24,8 +24,8 @@ walletName      = 'PaperWallet' # store addresses in wallet 'walletName'
 c = bitcoinrpc.connect_to_remote(rpcuser, rpcpassword , rpchost, port=rpcport)
 
 ## Lock & unlock wallet
-#conn.walletlock()
-#conn.walletpassphrase(passphrase, 999, 0)
+#c.walletlock()
+#c.walletpassphrase(passphrase, 999, 0)
 
 ## create 'many'-transaction
 target = {}
@@ -57,4 +57,4 @@ for add in adds:
  privkey    = subprocess.check_output('%s dumpprivkey "%s"' % (daemonName,x), shell=True)
  print "%s;%s;%s" %( x.strip(),privkey.strip(),balance )
 
-#conn. walletlock()
+#c. walletlock()
