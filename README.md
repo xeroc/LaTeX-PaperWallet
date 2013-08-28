@@ -10,10 +10,10 @@ Browse the existing branches using github (link above) or clone the repo and
 checkout the branches by
 
 $ git clone -b **btc** https://github.com/xeroc/LaTeX-PaperWallet.git  
-$ git clone -b **xpm** https://github.com/xeroc/LaTeX-PaperWallet.git
+$ git clone -b **xpm** https://github.com/xeroc/LaTeX-PaperWallet.git  
 $ git clone -b **ltc** https://github.com/xeroc/LaTeX-PaperWallet.git
 
 # Donations are welcome #
 BTC: `1XeRocJ6PRUX419QQo9crW5nbsjetJLUn`  
-XPM:	`AXeRocF9m3VX3P5TAfGiDq6hSSqWG5r6nd` 
+XPM:	`AXeRocF9m3VX3P5TAfGiDq6hSSqWG5r6nd`  
 LTC: `LXeRociKfU2rw21a7a3FvEL6adATCwwH9G`
