@@ -21,7 +21,7 @@ for acc in accs:
 	for add in adds:
 		x          = str(add)	
 		# get privkey from daemon
-		privkey    = subprocess.check_output('primecoind dumpprivkey "%s"' % (x), shell=True)
+		privkey    = subprocess.check_output('ppcoind dumpprivkey "%s"' % (x), shell=True)
 		# get balance using blockchain.info
 		# balanceURL = "http://blockchain.info/address/%s?format=json" % (x)
 		# balance    = requests.get(balanceURL).json['final_balance']/100000000.0

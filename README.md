@@ -5,7 +5,7 @@ Use at your own risk!
 
 # Requirements: #
 import-wallet.py:
-* primecoind
+* ppcoind
 Latex distrubition such as TexLive or MikTex
 
 generate-wallet.sh:

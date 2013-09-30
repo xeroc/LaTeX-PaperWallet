@@ -3,11 +3,11 @@ import json
 import subprocess
 
 # RPC Connection Info
-rpcuser         = 'primecoinrpc'
+rpcuser         = 'ppcoinrpc'
 rpcpassword     = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 rpchost         = 'localhost'
 rpcport         = 9912
-daemonName      = 'primecoind'
+daemonName      = 'ppcoind'
 
 # Wallet passphrase
 passphrase='5ecre7'
