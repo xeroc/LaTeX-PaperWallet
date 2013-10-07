@@ -1,22 +1,32 @@
 import bitcoinrpc
-import requests
 import json
 import subprocess
+
+# RPC Connection Info
+rpcuser         = 'ppcoinrpc'
+rpcpassword     = '7Mmmyw7PKJJxJhEETkC72LJP4QESR6dVRQX99otVsGDw'
+rpchost         = 'localhost'
+rpcport         = 9902
+daemonName      = 'ppcoind'
 
 # Wallet passphrase
 passphrase='5ecre7'
 
+## Connect
+c = bitcoinrpc.connect_to_remote(rpcuser, rpcpassword , rpchost, port=rpcport)
+
+## Lock & unlock wallet
+#c.walletlock()
+#c.walletpassphrase(passphrase, 999, 0)
+
 # Establish connection to bitcoind
-conn = bitcoinrpc.connect_to_local()
-conn.walletlock()
-conn.walletpassphrase(passphrase, 999, 0)
-accs = conn.listaccounts()
+accs = c.listaccounts()
 
 print "Address;PrivKey;Balance;"
 
 # all accounts
 for acc in accs:
-	adds = conn.getaddressesbyaccount( acc )
+	adds = c.getaddressesbyaccount( acc )
 	# all addresses
 	for add in adds:
 		x          = str(add)	
@@ -27,4 +37,4 @@ for acc in accs:
 		# balance    = requests.get(balanceURL).json['final_balance']/100000000.0
 		print "%s;%s;--" %( x.strip(),privkey.strip() )
 
-conn. walletlock()
+#c.walletlock()
