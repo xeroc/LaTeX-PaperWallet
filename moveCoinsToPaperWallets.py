@@ -3,11 +3,11 @@ import json
 import subprocess
 
 # RPC Connection Info
-rpcuser         = 'ppcoinrpc'
+rpcuser         = 'protosharesrpc'
 rpcpassword     = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 rpchost         = 'localhost'
-rpcport         = 9912
-daemonName      = 'ppcoind'
+rpcport         = 3838
+daemonName      = 'protoshared'
 
 # Wallet passphrase
 passphrase='5ecre7'
