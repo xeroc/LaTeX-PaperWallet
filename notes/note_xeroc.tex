@@ -1,0 +1,19 @@
+\newcommand{\PaperWallet}{
+ \begin{tikzpicture}[framed,inner frame sep=0]
+  \node[coordinate] at (0pt,0pt) (topleft) {};
+  \path[clip] (topleft) rectangle (85mm,-54mm); % The minus is important
+  \node[anchor=west,inner sep=0] at ($(topleft)+(5mm,-36mm)$) (QRCode1) {
+   \begin{pspicture}(50mm,50mm)
+    \psbarcode[linecolor=green!60!black]{\insertAddress}{eclevel=H}{qrcode}
+   \end{pspicture}
+  };
+  \node[anchor=east,inner sep=0] at ($(topleft)+(80mm,-36mm)$) (QRCode2) {
+   \begin{pspicture}(50mm,50mm)
+    \psbarcode[linecolor=red!60!black]{\insertPrivKey}{eclevel=H}{qrcode}
+   \end{pspicture}
+  };
+  \node[anchor=north,font=\small\bfseries] at ($(topleft)+(42.5mm,-2mm)$) (Address) {\insertAddress};
+  \node[anchor=north,below=.5ex,font=\tiny] at (Address.south) (PrivKey) {\color{gray}{\insertPrivKey}};
+  \node[anchor=north,font=\small,below=1ex] at (PrivKey.south) (Balance) {{\bf\Large\insertBalance}\ PTS};
+ \end{tikzpicture}
+}
