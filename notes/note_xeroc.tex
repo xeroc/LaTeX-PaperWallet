@@ -12,8 +12,11 @@
     \psbarcode[linecolor=red!60!black]{\insertPrivKey}{eclevel=H}{qrcode}
    \end{pspicture}
   };
+  %\path (QRCode1.east) -- 
+  % node[midway,opacity=0.8,anchor=center] {\includegraphics[width=2cm]{notes/Bitcoin_euro.png}}
+  %      (QRCode2.west);
   \node[anchor=north,font=\small\bfseries] at ($(topleft)+(42.5mm,-2mm)$) (Address) {\insertAddress};
   \node[anchor=north,below=.5ex,font=\tiny] at (Address.south) (PrivKey) {\color{gray}{\insertPrivKey}};
-  \node[anchor=north,font=\small,below=1ex] at (PrivKey.south) (Balance) {{\bf\Large\insertBalance}\ PTS};
+  \node[anchor=north,font=\small,below=1ex] at (PrivKey.south) (Balance) {{\bf\Large\insertBalance}\ \insertUnit};
  \end{tikzpicture}
 }
