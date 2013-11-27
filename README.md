@@ -43,9 +43,10 @@ using QR-Codes for fast access to the address and the private key.
 
 # Donations are welcome #
 Thank you for every donation.
+
 BTC: `1XeRocJ6PRUX419QQo9crW5nbsjetJLUn`  
 XPM: `AXeRocF9m3VX3P5TAfGiDq6hSSqWG5r6nd`  
 LTC: `LXeRoc6FVG3eswpuA4CJxjqMWc7Aq5sNnp`  
 PPC: `PXeRocjAG8W2bBPxZPRPBn5yErg3mRx8Gx`  
 PTS: `PkXeRocDnRSkHzuTbQdqYWRQ8QqmjwrdyY`  
-NMC; `MxerocLbhWEKELr2DAjXzUwAWRop2nsSZJ`  
+NMC: `MxerocLbhWEKELr2DAjXzUwAWRop2nsSZJ`  
