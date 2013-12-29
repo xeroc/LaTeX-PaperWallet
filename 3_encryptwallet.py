@@ -24,11 +24,13 @@ fid=open('wallet.csv', 'w+')
 fid.write("Coin;Unit;Address;PrivKey;Balance;\n")
 
 for c in jsondump :
- try :
-  c['PrivKey'] = bip38.bip38_encrypt(c['PrivKey'],pw1)
- except :
-  print "Error encoding the privkey. Already encrypted?"
-  exit(1)
+ if c['Unit'] == 'BTC' :
+  try :
+   c['PrivKey'] = bip38.bip38_encrypt(c['PrivKey'],pw1)
+  except :
+   print "[Warning] Error encoding the privkey for address %s. Already encrypted?" % c['Address']
+ else :
+  print "[Warning] Only encrypting Bitcoin Private Keys! Not encrypting %s Addresses" % c['Coin']
  fid.write("%s;%s;%s;%s;%s\n" %(c['Coin'],c['Unit'],c['Address'],c['PrivKey'],c['Balance']))
 
 print "Encrytion finished. The unencrypted privkey was overwritten."
