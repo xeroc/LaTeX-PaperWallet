@@ -20,6 +20,11 @@ using QR-Codes for fast access to the address and the private key.
         * json
         * subprocess
         * pprint
+    * for BIP38 encrypted wallets
+        * pycrypto
+        * scrypt
+        * pybitcointools
+        * base58
 
 # Howto Create PaperWallet #
 1. Store address and privkey in csv file
@@ -34,11 +39,11 @@ using QR-Codes for fast access to the address and the private key.
     * **1_importExistingWallets**:
         load existing wallets from deamons using 'listaddressgroupings'
 3. Uncomment _ONE_ note layout input line in 'paperWallet.tex' (line 41-48)
-2. Generate the PDF
+2. Generate the PDF  
 	$ ./2_generatePDF.sh*
 3. Print
-4. Cleanup:
- %./3_shredAndCleanup.sh*
+4. Cleanup:  
+ $ ./3_shredAndCleanup.sh*
 5. Donate to xeroc, vanitygen, charity ...
 
 # Donations are welcome #
