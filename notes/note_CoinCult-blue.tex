@@ -1,0 +1,18 @@
+\newcommand{\PaperWallet}{
+ \begin{tikzpicture}[framed,inner frame sep=0]
+  \node[coordinate] at (0pt,0pt) (topleft) {};
+  \node[anchor=north west,inner sep=0pt] at (topleft) {\includegraphics[width=156mm]{notes/note_CoinCult-blue.png}};
+  \node[anchor=center,inner sep=0] at ($(topleft)+(3mm,-63.7mm)+(12mm,12mm)$) (QRCode1) {
+   \resizebox{22mm}{!}{%
+    \begin{pspicture}(50mm,50mm)
+     \psbarcode[linecolor=black!80!white]{\insertAddress}{eclevel=H}{qrcode}
+    \end{pspicture}}};
+  \node[anchor=center,inner sep=0] at ($(topleft)+(129.1mm,-27.5mm)+(12mm,12mm)$) (QRCode2) {
+   \resizebox{22mm}{!}{%
+    \begin{pspicture}(50mm,50mm)
+     \psbarcode[linecolor=red!60!black]{\insertPrivKey}{eclevel=H}{qrcode}
+    \end{pspicture}}};
+  \node[anchor=west,font=\scriptsize\bfseries] at ($(topleft)+(31.1mm,-61.2mm)$) (Address) {\insertAddress};
+  \node[anchor=west] at ($(topleft)+(100mm,-6.3mm)$) (Balance) {{\bf\insertBalance}\ {\small\insertUnit}};
+ \end{tikzpicture}
+}
