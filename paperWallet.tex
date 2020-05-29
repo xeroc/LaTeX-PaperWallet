@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{pst-barcode}
 \usepackage{auto-pst-pdf}
-\usepackage{csvtools}
+\usepackage{datatool}
 \usepackage{coolstr}
 
 %% MARGINS
@@ -33,7 +33,7 @@
 \renewcommand{\familydefault}{\sfdefault}
 \pagestyle{empty}
 \normalfont
-\setcsvseparator{;}
+\DTLsetseparator{;}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% INPUT YOUR NOTE LAYOUT HERE
@@ -51,6 +51,10 @@
 % \input{notes/note_CoinCult-turqu}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\DTLloaddb{wallet}{wallet.csv}
 \begin{document}
- \applyCSVfile{wallet.csv}{\PaperWallet\hskip5mm}
+ \DTLforeach*
+ {wallet}
+ {\insertCoin=Coin, \insertUnit=Unit, \insertAddress:Address, \insertPrivKey=PrivKey, \insertBalance=Balance}
+ {\PaperWallet\hskip5mm}
 \end{document}
